@@ -10,21 +10,24 @@
     <link href="Home_Style.css" rel="stylesheet" />
     <title>Resume</title>
 </head>
-<body onresize ="center()">
+<body onresize="center()">
     <form id="form1" runat="server">
-        <asp:ScriptManager runat="server">
-        </asp:ScriptManager>
-        <asp:UpdatePanel runat="server">
-            <ContentTemplate>
-                <div id="divBrain">
-                    <img src="brain/sprite_0.png" id="brain" width="400" height="400"  usemap="#brainClick"/>
-                    <map name="brainClick">
-                        <area id="#brainstuff" onmouseover="loop()" shape ="rect" coords="0,0,400,400" href="google.com" alt="Brain"/>
-                    </map>
-                </div>
-            </ContentTemplate>
-        </asp:UpdatePanel>
-        
+
+        <div id="divBrain">
+            <img src="brain/sprite_0.png" id="brain" width="400" height="400" usemap="#brainClick" />
+            <map name="brainClick">
+                <area id="#brainstuff" onmouseover="loop()" onmouseout="" shape="rect" coords="0,0,400,400" href="google.com" alt="Brain" />
+            </map>
+        </div>
+        <div id="divBottomRight">
+            <div id="divLinkedIn">
+                <img src="LinkedIn.png" />
+            </div>
+            <div id="divMail">
+                <img src="Mail.png" />
+            </div>
+        </div>
+
     </form>
 </body>
 </html>
@@ -39,6 +42,6 @@
         setInterval(function () {                           //interval changer
             rotator.src = dir + num + '.png';               //change picture
             num = (num === len) ? 0 : ++num;              //reset if last image reached
-        }, delayInSeconds * 50);
+        }, delayInSeconds * 50); //50ms per frame
     };
 </script>

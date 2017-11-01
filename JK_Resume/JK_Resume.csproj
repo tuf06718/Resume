@@ -155,6 +155,8 @@
     <Content Include="brain\sprite_9.png" />
     <Content Include="Home.aspx" />
     <Content Include="Home_Style.css" />
+    <Content Include="LinkedIn.png" />
+    <Content Include="Mail.png" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
