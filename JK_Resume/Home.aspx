@@ -20,8 +20,11 @@
             </map>
         </div>
         <div id="divBottomRight">
-            <div id="divLinkedIn" class="animate-flicker">
-                <img src="LinkedIn.png" />
+            <div id="divLinkedIn" class="animate-flicker" >
+                <a href="https://www.linkedin.com/in/jonathan-kaganovich-a4b158b8/">
+                    <img src="LinkedIn.png" />
+                </a>
+                
             </div>
             <br />
             <div id="divMail" class="animate-flicker">
