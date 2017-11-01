@@ -14,3 +14,30 @@
     left: 90%;
     transform: translate(-90%,-90%);
 }
+
+@keyframes flickerAnimation {
+  0%   { opacity:.5; }
+  50%  { opacity:1; }
+  100% { opacity:.5; }
+}
+@-o-keyframes flickerAnimation{
+  0%   { opacity:.5; }
+  50%  { opacity:1; }
+  100% { opacity:.5; }
+}
+@-moz-keyframes flickerAnimation{
+  0%   { opacity:.5; }
+  50%  { opacity:1; }
+  100% { opacity:.5; }
+}
+@-webkit-keyframes flickerAnimation{
+  0%   { opacity:.5; }
+  50%  { opacity:1; }
+  100% { opacity:.5; }
+}
+.animate-flicker:hover{
+   -webkit-animation: flickerAnimation .2s infinite;
+   -moz-animation: flickerAnimation .2s infinite;
+   -o-animation: flickerAnimation .2s infinite;
+    animation: flickerAnimation .2s infinite;
+}

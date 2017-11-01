@@ -10,20 +10,21 @@
     <link href="Home_Style.css" rel="stylesheet" />
     <title>Resume</title>
 </head>
-<body onresize="center()">
+<body>
     <form id="form1" runat="server">
 
         <div id="divBrain">
             <img src="brain/sprite_0.png" id="brain" width="400" height="400" usemap="#brainClick" />
             <map name="brainClick">
-                <area id="#brainstuff" onmouseover="loop()" onmouseout="" shape="rect" coords="0,0,400,400" href="google.com" alt="Brain" />
+                <area id="#brainstuff" onmouseover="startLoop()" onmouseout="stopLoop()" shape="rect" coords="0,0,400,400" href="google.com" alt="Brain" />
             </map>
         </div>
         <div id="divBottomRight">
-            <div id="divLinkedIn">
+            <div id="divLinkedIn" class="animate-flicker">
                 <img src="LinkedIn.png" />
             </div>
-            <div id="divMail">
+            <br />
+            <div id="divMail" class="animate-flicker">
                 <img src="Mail.png" />
             </div>
         </div>
@@ -33,15 +34,20 @@
 </html>
 <script>
     //loop();
-    function loop() {
+
+    var looper = {}
         var rotator = document.getElementById('brain'), //get the element
             dir = 'brain/sprite_',                              //images folder
             delayInSeconds = 1,                           //delay in seconds
             num = 0,                                      //start number
             len = 46;                                      //limit
-        setInterval(function () {                           //interval changer
-            rotator.src = dir + num + '.png';               //change picture
-            num = (num === len) ? 0 : ++num;              //reset if last image reached
-        }, delayInSeconds * 50); //50ms per frame
-    };
+        function startLoop() {
+            looper.loop = setInterval(function loop() {                           //interval changer
+                rotator.src = dir + num + '.png';               //change picture
+                num = (num === len) ? 0 : ++num;              //reset if last image reached
+            }, delayInSeconds * 50); //50ms per frame
+        };
+    function stopLoop() {
+        var stop = clearInterval(looper.loop);
+    }
 </script>
