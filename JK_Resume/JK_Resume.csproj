@@ -43,6 +43,34 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.AI.Agent.Intercept, Version=2.0.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.2.0.6\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.DependencyCollector, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.DependencyCollector.2.2.0\lib\net45\Microsoft.AI.DependencyCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.PerfCounterCollector, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.PerfCounterCollector.2.2.0\lib\net45\Microsoft.AI.PerfCounterCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.ServerTelemetryChannel, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.2.2.0\lib\net45\Microsoft.AI.ServerTelemetryChannel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.Web, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Web.2.2.0\lib\net45\Microsoft.AI.Web.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.WindowsServer, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.2.2.0\lib\net45\Microsoft.AI.WindowsServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationInsights, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.2.2.0\lib\net45\Microsoft.ApplicationInsights.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
       <Private>True</Private>
@@ -67,6 +95,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
+    <Content Include="ApplicationInsights.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -75,9 +106,65 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="brain\sprite_0.png" />
+    <Content Include="brain\sprite_1.png" />
+    <Content Include="brain\sprite_10.png" />
+    <Content Include="brain\sprite_11.png" />
+    <Content Include="brain\sprite_12.png" />
+    <Content Include="brain\sprite_13.png" />
+    <Content Include="brain\sprite_14.png" />
+    <Content Include="brain\sprite_15.png" />
+    <Content Include="brain\sprite_16.png" />
+    <Content Include="brain\sprite_17.png" />
+    <Content Include="brain\sprite_18.png" />
+    <Content Include="brain\sprite_19.png" />
+    <Content Include="brain\sprite_2.png" />
+    <Content Include="brain\sprite_20.png" />
+    <Content Include="brain\sprite_21.png" />
+    <Content Include="brain\sprite_22.png" />
+    <Content Include="brain\sprite_23.png" />
+    <Content Include="brain\sprite_24.png" />
+    <Content Include="brain\sprite_25.png" />
+    <Content Include="brain\sprite_26.png" />
+    <Content Include="brain\sprite_27.png" />
+    <Content Include="brain\sprite_28.png" />
+    <Content Include="brain\sprite_29.png" />
+    <Content Include="brain\sprite_3.png" />
+    <Content Include="brain\sprite_30.png" />
+    <Content Include="brain\sprite_31.png" />
+    <Content Include="brain\sprite_32.png" />
+    <Content Include="brain\sprite_33.png" />
+    <Content Include="brain\sprite_34.png" />
+    <Content Include="brain\sprite_35.png" />
+    <Content Include="brain\sprite_36.png" />
+    <Content Include="brain\sprite_37.png" />
+    <Content Include="brain\sprite_38.png" />
+    <Content Include="brain\sprite_39.png" />
+    <Content Include="brain\sprite_4.png" />
+    <Content Include="brain\sprite_40.png" />
+    <Content Include="brain\sprite_41.png" />
+    <Content Include="brain\sprite_42.png" />
+    <Content Include="brain\sprite_43.png" />
+    <Content Include="brain\sprite_44.png" />
+    <Content Include="brain\sprite_45.png" />
+    <Content Include="brain\sprite_46.png" />
+    <Content Include="brain\sprite_5.png" />
+    <Content Include="brain\sprite_6.png" />
+    <Content Include="brain\sprite_7.png" />
+    <Content Include="brain\sprite_8.png" />
+    <Content Include="brain\sprite_9.png" />
+    <Content Include="Home.aspx" />
+    <Content Include="Home_Style.css" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <PropertyGroup>
