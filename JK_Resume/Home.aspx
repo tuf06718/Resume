@@ -12,27 +12,39 @@
 </head>
 <body>
     <form id="form1" runat="server">
+
         <div id="divHead">
             <img src="Me.png"  width="200" height="200" />
         </div>
+
+
         <div id="divBrain">
             <img src="brain/sprite_0.png" id="brain" width="200" height="200" usemap="#brainClick" />
             <map name="brainClick">
-                <area id="#brainstuff" onmouseover="startLoop()" onmouseout="stopLoop()" shape="rect" coords="0,0,400,400"/>
+                <area id="#brainstuff" onmouseover="startLoopBrain()" onmouseout="stopLoopBrain()" shape="rect" coords="0,0,400,400"/>
             </map>
         </div>
+
+        <div id="divCap">
+            <img src="cap/sprite_0.png" id="cap" width="200" height="200" usemap="#capClick" />
+            <map name="capClick">
+                <area id="#capstuff" onmouseover="startLoopCap()" onmouseout="stopLoopCap()" shape="rect" coords="0,0,200,200"/>
+            </map>
+        </div>
+
         <div id="divBottomRight">
             <div id="divLinkedIn" class="animate-flicker">
                 <a href="https://www.linkedin.com/in/jonathan-kaganovich-a4b158b8/">
                     <input type="image" src="LinkedIn.png" onserverclick=""/> LinkedIn
-                </a>
-                
+                </a> 
             </div>
             <br />
             <div id="divMail" class="animate-flicker">
                 <input type="image" src="Mail.png" onserverclick=""/> Email Me
             </div>
         </div>
+
+
         <asp:ScriptManager runat="server">
         </asp:ScriptManager>
 
@@ -61,21 +73,37 @@
 
     //loop brain
     var rotatorBrain = document.getElementById('brain'), //get the element
-        dir = 'brain/sprite_',                              //images folder
-        delayInSeconds = 1,                           //delay in seconds
-        num = 0,                                      //start number
-        len = 46;                                      //limit
-    function startLoop() {
+        Bdir = 'brain/sprite_',                              //images folder
+        BdelayInSeconds = 1,                           //delay in seconds
+        Bnum = 0,                                      //start number
+        Blen = 46;                                      //limit
+    function startLoopBrain() {
         looper.loopBrain = setInterval(function loop() {                           //interval changer
-            rotatorBrain.src = dir + num + '.png';               //change picture
-            num = (num === len) ? 0 : ++num;              //reset if last image reached
-        }, delayInSeconds * 50); //50ms per frame
+            rotatorBrain.src = Bdir + Bnum + '.png';               //change picture
+            Bnum = (Bnum === Blen) ? 0 : ++Bnum;              //reset if last image reached
+        }, BdelayInSeconds * 50); //50ms per frame
     };
-    function stopLoop() {
+    function stopLoopBrain() {
         var stop = clearInterval(looper.loopBrain);
         rotatorBrain.src = 'brain/sprite_0.png';
     }
 
+    //loop cap
+    var rotatorCap = document.getElementById('cap'), //get the element
+        dir = 'cap/sprite_',                              //images folder
+        delayInSeconds = 1,                           //delay in seconds
+        num = 1,                                      //start number
+        len = 11;                                      //limit
+    function startLoopCap() {
+        looper.loopCap = setInterval(function loop() {                           //interval changer
+            rotatorCap.src = dir + num + '.png';               //change picture
+            num = (num === len) ? 1 : ++num;              //reset if last image reached
+        }, delayInSeconds * 50); //50ms per frame
+    };
+    function stopLoopCap() {
+        var stop = clearInterval(looper.loopCap);
+        rotatorCap.src = 'cap/sprite_0.png';
+    }
 
     //coin random
     function moveDiv() {

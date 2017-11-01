@@ -94,6 +94,18 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="cap\sprite_0.png" />
+    <Content Include="cap\sprite_1.png" />
+    <Content Include="cap\sprite_2.png" />
+    <Content Include="cap\sprite_3.png" />
+    <Content Include="cap\sprite_4.png" />
+    <Content Include="cap\sprite_5.png" />
+    <Content Include="cap\sprite_6.png" />
+    <Content Include="cap\sprite_7.png" />
+    <Content Include="cap\sprite_8.png" />
+    <Content Include="cap\sprite_9.png" />
+    <Content Include="cap\sprite_10.png" />
+    <Content Include="cap\sprite_11.png" />
     <Content Include="coin.gif" />
     <Content Include="Me.png" />
     <Content Include="packages.config" />

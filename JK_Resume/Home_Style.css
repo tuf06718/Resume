@@ -25,11 +25,20 @@
     font-family: '8-BIT WONDER';
     src: url('8-BIT WONDER.TTF') format('truetype');
 }
+
+#divCap{
+    
+    position: absolute;
+    top:  69%;
+    left: 60%;
+    transform: translate(-65%,-60%);
+}
+
 #divBrain {
     position: absolute;
     top:  65%;
     left: 40%;
-    transform: translate(-75%,-35%);
+    transform: translate(-65%,-40%);
 }
 
 #divHead {
