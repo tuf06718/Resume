@@ -1,11 +1,47 @@
 ﻿body {
     background-color:#f7f7f7;
+    font-family:'8-BIT WONDER';
+
+}
+
+#coin2 {
+    opacity: .5;  
+    background-image: url('coin.gif');
+    /* 16px x 16px */
+    background-color: transparent; /* make the button transparent */
+    background-repeat: no-repeat; /* make the background image appear only once */
+    background-position: 0px 0px; /* equivalent to 'top left' */
+    border: none; /* assuming we don't want any borders */
+    cursor: pointer; /* make the cursor like hovering over an <a> element */
+    height: 30px; /* make this the size of your image */
+    padding-left: 30px; /* make text start to the right of the image */
+    vertical-align: middle; /* align the text vertically centered */
+}
+
+#coin2:hover{
+    opacity:.7;
+}
+@font-face {
+    font-family: '8-BIT WONDER';
+    src: url('8-BIT WONDER.TTF') format('truetype');
 }
 #divBrain {
+    position: absolute;
+    top:  65%;
+    left: 40%;
+    transform: translate(-75%,-35%);
+}
+
+#divHead {
     position: absolute;
     top:  50%;
     left: 50%;
     transform: translate(-50%,-50%);
+}
+
+span { 
+    display: inline-block; 
+    position: absolute;
 }
 
 #divBottomRight{
