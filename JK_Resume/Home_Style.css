@@ -1,7 +1,7 @@
 ﻿body {
-    background-color:#f7f7f7;
-    font-family:'8-BIT WONDER';
-
+    background-color: #f7f7f7;
+    font-family: '8-BIT WONDER';
+    
 }
 
 #coin2 {
@@ -26,18 +26,25 @@
     src: url('8-BIT WONDER.TTF') format('truetype');
 }
 
+#divAboutMe{
+    position: absolute;
+    top:  82%;
+    left: 50.5%;
+    transform: translate(-65%,-60%);
+}
+
 #divCap{
     
     position: absolute;
-    top:  69%;
-    left: 60%;
+    top:  35%;
+    left: 62.5%;
     transform: translate(-65%,-60%);
 }
 
 #divBrain {
     position: absolute;
-    top:  65%;
-    left: 40%;
+    top:  32%;
+    left: 36%;
     transform: translate(-65%,-40%);
 }
 
