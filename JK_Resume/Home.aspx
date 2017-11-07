@@ -12,15 +12,15 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <div class="col-lg-12" style="z-index:-1; height:100%">
-            <div class="col-lg-4 col-md-4 col-sm-4" id="lblExperience" style="z-index:-1; visibility: hidden; float: left; ">
-                <h1 style="float:left; -ms-transform:rotate(-7deg); -webkit-transform:rotate(-7deg); transform:rotate(-7deg);">Experience</h1>
+        <div id="topText" class="col-lg-12" style="z-index:-1; height:100vw; color:black; margin:0px; padding:0px;">
+            <div class="col-lg-4 col-md-4 col-sm-4" id="lblExperience" style="z-index:-1; visibility: hidden; float: left; height:100%;">
+                <h1 style="float:left;">Experience</h1>
             </div>
             <div class="col-lg-4 col-md-4 col-sm-4" id="lblAboutMe" style="z-index:-1; visibility: hidden; text-align: center; height:100%">
                 <h1>About Me</h1>
             </div>
             <div class="col-lg-4 col-md-4 col-sm-4" id="lblEducation" style="z-index:-1; visibility: hidden; height:100%">
-                <h1 style="float:right; -ms-transform:rotate(7deg); -webkit-transform:rotate(7deg); transform:rotate(7deg);">Education</h1>
+                <h1 style="float:right;">Education</h1>
             </div>
 
         </div>
@@ -77,17 +77,33 @@
     </form>
 </body>
 </html>
+
+<audio id="blop">
+    <source src="sound_effects/Blop.mp3"/>
+</audio>
+<audio id="pling">
+    <source src="sound_effects/Pling.mp3"/>
+</audio>
+<audio id="typing">
+    <source src="sound_effects/Typing.mp3" />
+</audio>
+    
+
+
+
 <script>
 
     function shadowEverything(currentImage, label) {
-        $('div').not(currentImage, lblAboutMe, lblEducation, lblExperience).css("opacity", .8);
-        $(label).css("background-color", 'yellow')
+        $('div').not(currentImage + ', #topText, #lblAboutMe, #lblExperience, #lblEducation').css({ "opacity": .5, "transition": "ease-in, .5s" });
+        //$(label).css("background-color", '#fff1f1')
         $('#coin2').css('visibility', 'hidden');
+        var audio = $("#blop")[0];
+        audio.play();
     }
 
     function unshadowEverything(currentImage, label) {
         $('div').not(currentImage).css("opacity", 1, "transition", "2s");
-        $(label).css("background-color", 'none')
+        //$(label).css("background-color", 'none')
         $('#coin2').css('visibility', 'visible');
     }
 
@@ -101,17 +117,26 @@
         MdelayInSeconds = 1,
         Mnum = 0,
         Mlen = 3;
+    var audio2 = $("#typing")[0];
     function startLoopMe() {
+        
+        audio2.loop = true;
+        audio2.play();
+
         looper.loopMe = setInterval(function loop() {
             rotatorMe.src = Mdir + Mnum + '.png';
             Mnum = (Mnum === Mlen) ? 0 : ++Mnum;
         }, MdelayInSeconds * 50);
+
+        
         //$(document.body).css("background-image", "url('Code.gif')");
     };
     function stopLoopMe() {
         var stop = clearInterval(looper.loopMe);
         rotatorMe.src = 'me/sprite_0.png';
         //$(document.body).css("background-image", "none");
+        audio2.loop = false;
+        audio2.pause();
     }
     
     //loop case

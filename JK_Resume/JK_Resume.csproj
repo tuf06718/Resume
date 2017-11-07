@@ -130,6 +130,7 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="8-BIT WONDER.TTF" />
+    <Content Include="Messe Duesseldorf.woff" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -189,6 +190,9 @@
     <Content Include="Home_Style.css" />
     <Content Include="LinkedIn.png" />
     <Content Include="Mail.png" />
+    <Content Include="sound_effects\Blop.mp3" />
+    <Content Include="sound_effects\Pling.mp3" />
+    <Content Include="sound_effects\Typing.mp3" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>

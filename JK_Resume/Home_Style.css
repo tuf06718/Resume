@@ -1,9 +1,14 @@
 ﻿body {
     background-color: #f7f7f7;
-    font-family: '8-BIT WONDER';
-    
+  
+    /*font-family: '8-BIT WONDER';*/
+    font-family:'Messe Duesseldorf';
 }
 
+@font-face {
+    font-family: 'Messe Duesseldorf';
+    src: url('Messe Duesseldorf.woff') format('woff');
+}
 #coin2 {
     opacity: .5;  
     background-image: url('coin.gif');
