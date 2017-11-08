@@ -12,7 +12,7 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <div id="topText" class="col-lg-12" style="z-index:-1; height:100vw; color:black; margin:0px; padding:0px;">
+        <div id="topText" class="col-lg-12">
             <div class="col-lg-4 col-md-4 col-sm-4" id="lblExperience" style="z-index:-1; visibility: hidden; float: left; height:100%;">
                 <h1 style="float:left;">Experience</h1>
             </div>
@@ -25,13 +25,18 @@
 
         </div>
         
+        
+        
 
         <div id="divHead">
             <img src="me\sprite_0.png"  id="me" width="200" height="200" onmouseover="startLoopMe()" onmouseout="stopLoopMe()"/>
         </div>
+
+
         <div id="divAboutMe">
-            <img src="aboutMe\sprite_0.png"  id="aboutMe" width="200" height="200" onmouseover="startLoopAboutMe()" onmouseout="stopLoopAboutMe()"/>
+            <img src="aboutMe\sprite_0.png" class="popper" id="aboutMe" width="200" height="200" onclick="aboutMeClick()" onmouseover="startLoopAboutMe()" onmouseout="stopLoopAboutMe()"/>
         </div>
+       
 
         <div id="divBrain">
             <img src="brain/sprite_0.png" id="brain" width="200" height="200" usemap="#brainClick" />
@@ -49,31 +54,33 @@
         </div>
 
         <div id="divBottomRight">
-            <div id="divLinkedIn" class="animate-flicker">
-                <a href="https://www.linkedin.com/in/jonathan-kaganovich-a4b158b8/">
-                    <input type="image" src="LinkedIn.png" onserverclick=""/> LinkedIn
-                </a> 
+            <div id="divLinkedIn" class="animate-flicker" onclick="goToLinkedIn()">
+                <img src="LinkedIn.png" />
+                
             </div>
             <br />
             <div id="divMail" class="animate-flicker">
-                <input type="image" src="Mail.png" onserverclick=""/> Email Me
+                <input type="image" src="Mail.png" onserverclick=""/> 
             </div>
+        </div>
+
+
+        <div id="divBottomLeft">
+            <img id="code" src="" />
         </div>
 
 
         <asp:ScriptManager runat="server">
         </asp:ScriptManager>
 
-        <asp:updatepanel runat="server">
-            <ContentTemplate>
-                <div id="container">
-                    <span class="random" onload="loopCoin()" onclick="stopCoin()">
-                        <input type="button" id="coin2" onclick="stopCoin();" />
-                    </span>
-                </div>
-            </ContentTemplate>
-        </asp:updatepanel>
-        
+
+        <div id="container">
+            <span class="random" onload="loopCoin()" onclick="stopCoin()">
+                <input type="button" id="coin2" onclick="stopCoin();" />
+            </span>
+        </div>
+
+
     </form>
 </body>
 </html>
@@ -90,11 +97,22 @@
     
 
 
+<div class="popper-content hide">My third popover content goes here.</div>
+
 
 <script>
+    
+
+            
+     
+
+    function goToLinkedIn() {
+        window.location.href = 'https://www.linkedin.com/in/jonathan-kaganovich-a4b158b8/';
+    }
+    
 
     function shadowEverything(currentImage, label) {
-        $('div').not(currentImage + ', #topText, #lblAboutMe, #lblExperience, #lblEducation').css({ "opacity": .5, "transition": "ease-in, .5s" });
+        $('div').not(currentImage + currentImage+'Content, #topText, #lblAboutMe, #lblExperience, #lblEducation').css({ "opacity": .5, "transition": "ease-in, .5s" });
         //$(label).css("background-color", '#fff1f1')
         $('#coin2').css('visibility', 'hidden');
         var audio = $("#blop")[0];
@@ -119,7 +137,7 @@
         Mlen = 3;
     var audio2 = $("#typing")[0];
     function startLoopMe() {
-        
+        startLoopCode();
         audio2.loop = true;
         audio2.play();
 
@@ -127,18 +145,34 @@
             rotatorMe.src = Mdir + Mnum + '.png';
             Mnum = (Mnum === Mlen) ? 0 : ++Mnum;
         }, MdelayInSeconds * 50);
-
-        
-        //$(document.body).css("background-image", "url('Code.gif')");
     };
     function stopLoopMe() {
         var stop = clearInterval(looper.loopMe);
         rotatorMe.src = 'me/sprite_0.png';
-        //$(document.body).css("background-image", "none");
         audio2.loop = false;
         audio2.pause();
+        stopLoopCode();
     }
     
+    //loop code
+    var rotatorCode = document.getElementById('code'),
+        Cdir = 'code/sprite_',
+        CdelayInSeconds = 1,
+        Cnum = 0,
+        Clen = 35;
+    
+    function startLoopCode() {
+        looper.loopCode = setInterval(function loop() {
+            rotatorCode.src = Cdir + Cnum + '.png';
+            Cnum = (Cnum === Clen) ? 0 : ++Cnum;
+        }, CdelayInSeconds * 50);
+    };
+    function stopLoopCode() {
+        var stop = clearInterval(looper.loopCode);
+        rotatorCode.src = '';
+    }
+
+
     //loop case
     var rotatorAboutMe = document.getElementById('aboutMe'),
         Adir = 'aboutMe/sprite_',

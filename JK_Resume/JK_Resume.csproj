@@ -120,6 +120,42 @@
     <Content Include="cap\sprite_10.png" />
     <Content Include="cap\sprite_11.png" />
     <Content Include="Code.gif" />
+    <Content Include="code\sprite_0.png" />
+    <Content Include="code\sprite_1.png" />
+    <Content Include="code\sprite_2.png" />
+    <Content Include="code\sprite_3.png" />
+    <Content Include="code\sprite_4.png" />
+    <Content Include="code\sprite_5.png" />
+    <Content Include="code\sprite_6.png" />
+    <Content Include="code\sprite_7.png" />
+    <Content Include="code\sprite_8.png" />
+    <Content Include="code\sprite_9.png" />
+    <Content Include="code\sprite_10.png" />
+    <Content Include="code\sprite_11.png" />
+    <Content Include="code\sprite_12.png" />
+    <Content Include="code\sprite_13.png" />
+    <Content Include="code\sprite_14.png" />
+    <Content Include="code\sprite_15.png" />
+    <Content Include="code\sprite_16.png" />
+    <Content Include="code\sprite_17.png" />
+    <Content Include="code\sprite_18.png" />
+    <Content Include="code\sprite_19.png" />
+    <Content Include="code\sprite_20.png" />
+    <Content Include="code\sprite_21.png" />
+    <Content Include="code\sprite_22.png" />
+    <Content Include="code\sprite_23.png" />
+    <Content Include="code\sprite_24.png" />
+    <Content Include="code\sprite_25.png" />
+    <Content Include="code\sprite_26.png" />
+    <Content Include="code\sprite_27.png" />
+    <Content Include="code\sprite_28.png" />
+    <Content Include="code\sprite_29.png" />
+    <Content Include="code\sprite_30.png" />
+    <Content Include="code\sprite_31.png" />
+    <Content Include="code\sprite_32.png" />
+    <Content Include="code\sprite_33.png" />
+    <Content Include="code\sprite_34.png" />
+    <Content Include="code\sprite_35.png" />
     <Content Include="coin.gif" />
     <Content Include="me\sprite_0.png" />
     <Content Include="me\sprite_1.png" />
@@ -220,7 +256,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>63571</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:63571/</IISUrl>
+          <IISUrl>http://localhost:63572/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

@@ -23,6 +23,33 @@
     vertical-align: middle; /* align the text vertically centered */
 }
 
+
+
+.popover-title{
+    font-family:'Messe Duesseldorf';
+}
+
+.popover {
+    background: tomato !important;
+    font-family: '8-BIT WONDER';
+}
+
+    .popover.top .arrow:after {
+        border-top-color: tomato;
+    }
+
+    .popover.bottom .arrow:after{
+        border-bottom-color: tomato;
+    }
+
+    .popover.left .arrow:after{
+        border-left-color:tomato;
+    }
+
+    .popover.right .arrow:after{
+        border-right-color:tomato;
+    }
+
 #coin2:hover{
     opacity:.7;
 }
@@ -67,9 +94,20 @@ span {
 
 #divBottomRight{
     position: absolute;
-    top:  90%;
-    left: 90%;
+    top:  95%;
+    left: 99%;
     transform: translate(-90%,-90%);
+}
+
+#divBottomLeft{
+    position: absolute;
+    top:  63%;
+    left: 85%;
+    transform: translate(-90%,-90%);
+}
+
+a:link{
+    text-decoration:none;
 }
 
 @keyframes flickerAnimation {
