@@ -1,9 +1,11 @@
 ﻿body {
+    /*overflow-x: hidden;*/
     background-color: #f7f7f7;
   
     /*font-family: '8-BIT WONDER';*/
     font-family:'Messe Duesseldorf';
 }
+
 
 @font-face {
     font-family: 'Messe Duesseldorf';

@@ -24,9 +24,8 @@
             </div>
 
         </div>
-        
-        
-        
+
+       
 
         <div id="divHead">
             <img src="me\sprite_0.png"  id="me" width="200" height="200" onmouseover="startLoopMe()" onmouseout="stopLoopMe()"/>
@@ -97,14 +96,12 @@
     
 
 
-<div class="popper-content hide">My third popover content goes here.</div>
+
 
 
 <script>
-    
 
-            
-     
+    
 
     function goToLinkedIn() {
         window.location.href = 'https://www.linkedin.com/in/jonathan-kaganovich-a4b158b8/';
@@ -112,7 +109,7 @@
     
 
     function shadowEverything(currentImage, label) {
-        $('div').not(currentImage + currentImage+'Content, #topText, #lblAboutMe, #lblExperience, #lblEducation').css({ "opacity": .5, "transition": "ease-in, .5s" });
+        $('div').not(currentImage + ", " + currentImage+'Content, #topText, #lblAboutMe, #lblExperience, #lblEducation').css({ "opacity": .5, "transition": "ease-in, .5s" });
         //$(label).css("background-color", '#fff1f1')
         $('#coin2').css('visibility', 'hidden');
         var audio = $("#blop")[0];

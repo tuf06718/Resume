@@ -157,6 +157,7 @@
     <Content Include="code\sprite_34.png" />
     <Content Include="code\sprite_35.png" />
     <Content Include="coin.gif" />
+    <Content Include="email_win.png" />
     <Content Include="me\sprite_0.png" />
     <Content Include="me\sprite_1.png" />
     <Content Include="me\sprite_2.png" />
