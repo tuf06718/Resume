@@ -25,7 +25,44 @@
     vertical-align: middle; /* align the text vertically centered */
 }
 
+.experience{
+    width:20%;
+    color:black;
+    box-shadow:1px 1px 25px #808080;
+    position: absolute;
+    /*animation: createBox 1s;*/
+    font-size: 13px;
+    visibility : hidden;
+    
+}
 
+@keyframes createBox {
+  from {
+    transform: scale(0);
+    
+
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+#divExperience1{
+    background-color:#e7fafb;
+    
+}
+#divExperience2{
+    background-color:#ebdcfe;
+    left: 25%;
+}
+#divExperience3{
+    background-color:#dbffde;
+    left:55%
+}
+#divExperience4{
+    background-color:#ffe7d4;
+    left:80%;
+}
 
 .popover-title{
     font-family:'Messe Duesseldorf';

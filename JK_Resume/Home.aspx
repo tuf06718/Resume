@@ -40,7 +40,7 @@
         <div id="divBrain">
             <img src="brain/sprite_0.png" id="brain" width="200" height="200" usemap="#brainClick" />
             <map name="brainClick">
-                <area id="#brainstuff" onmouseover="startLoopBrain()" onmouseout="stopLoopBrain()" shape="rect" coords="0,0,400,400"/>
+                <area id="#brainstuff" onmouseover="startLoopBrain()" onmouseout="stopLoopBrain()" onclick="experienceOpen();" shape="rect" coords="0,0,400,400"/>
             </map>
             
         </div>
@@ -80,6 +80,73 @@
         </div>
 
 
+        <div id="divExperience1" class="experience alert alert-danger alert-dismissable">
+            <a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>
+            <h1><b>Temple University Housing and Residential Life</b></h1>
+            <h2><i>PC & Network Specialist Assistant</i></h2>
+            <h3>Aug 2013 - Present</h3>
+            <h3>1300 Cecil B. Moore Ave, Philadelphia, PA 19122</h3>
+            <br />
+            <ul>
+                <li>Responded to campus-wide service calls as a helpdesk technician remotely or on-site, supporting staff and
+workstation computers via Remedy IT Service Management Suite</li>
+                <li>Diagnosed and resolved technical hardware and software faults involving network connectivity, email clients, and
+application problems including Residential Management System and Kronos Timekeeping for all staff
+                </li>
+                <li>Developed critical thinking skills and ability to multitask while responding to dozens of tickets weekly via
+Spiceworks IT management system
+                </li>
+                <li>Installed and configured PC’s and MACs, printers, scanners, card readers, and electronic key boxes
+                </li>
+            </ul>
+        </div>
+
+        <div id="divExperience2" class="experience alert alert-danger alert-dismissable" draggable="false">
+            <a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>
+            <h1><b>Freelance Computer Technician</b></h1>
+            <h2><i>Self-Employed</i></h2>
+            <h3>Bucks County, PA</h3>
+            <h3>May 2013 - Present</h3>
+            <br />
+            <ul>
+                <li>Acquired parts, built computers, as well as computer networks to fit the needs of a specific client
+                </li>
+                <li>Optimized and repaired computers, small business/home Local Area Networks, and office equipment
+                </li>
+                <li>Diagnosed and replaced various hardware and system components
+                </li>
+                <li>Installed and upgraded hardware and operating systems
+                </li>
+            </ul>
+        </div>
+
+        <div id="divExperience3" class="experience alert alert-danger alert-dismissable">
+            <a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>
+            <h1><b>Java Expert</b></h1>
+            <h2><i>Zwerl</i></h2>
+            <h3>Oct 2017 - Present</h3>
+            <ul>
+                <li>Provide Java support to chat users with Sphere platform
+                </li>
+            </ul>
+        </div>
+
+        <div id="divExperience4" class="experience alert alert-danger alert-dismissable">
+            <a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>
+            <h1><b>Office Administrator & Technology Advisor</b></h1>
+            <h2><i>Concordia Center of Clinical Chiropractic</i></h2>
+            <h3>8400 Bustleton Ave, Philadelphia, PA 19152</h3>
+            <br />
+            <ul>
+                <li>Set up and maintained a network for all office computers, printers and scanners
+                </li>
+                <li>Promoted and facilitated the digitizing of patient records
+                </li>
+                <li>Set up and maintained a normalized database with thousands of records
+                </li>
+            </ul>
+        </div>
+
     </form>
 </body>
 </html>
@@ -104,9 +171,14 @@
     
 
     function goToLinkedIn() {
-        window.location.href = 'https://www.linkedin.com/in/jonathan-kaganovich-a4b158b8/';
+        var win = window.open('https://www.linkedin.com/in/jonathan-kaganovich-a4b158b8/', '_blank');
+        win.focus();
+        
     }
     
+    function experienceOpen() {
+        $('.experience').css({ 'visibility': 'visible', 'animation' : 'createBox 1s'});
+    }
 
     function shadowEverything(currentImage, label) {
         $('div').not(currentImage + ", " + currentImage+'Content, #topText, #lblAboutMe, #lblExperience, #lblEducation').css({ "opacity": .5, "transition": "ease-in, .5s" });
@@ -117,7 +189,7 @@
     }
 
     function unshadowEverything(currentImage, label) {
-        $('div').not(currentImage).css("opacity", 1, "transition", "2s");
+        $('div').not(currentImage).css({ "opacity": '1', "transition": "2s" });
         //$(label).css("background-color", 'none')
         $('#coin2').css('visibility', 'visible');
     }
